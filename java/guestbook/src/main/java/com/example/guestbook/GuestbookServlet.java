@@ -29,7 +29,7 @@ public class GuestbookServlet extends HttpServlet {
         resp.setContentType("text/plain");
         resp.getWriter().println("Hello, " + currentUser.getNickname());
       } else {
-        rest.sendRedirect(userService.createLoginURL(req.getRequestURI()));
+        resp.sendRedirect(userService.createLoginURL(req.getRequestURI()));
       }
     }
   }
